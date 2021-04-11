@@ -7,5 +7,5 @@ from webapp.models.productos_de_control import Productoscontrol
 from webapp.models.tipos_productos_control import Tiposproductoscontrol
 from webapp.models.labores import Labores
 
-__all__=['Ciudades', 'Productores', 'Viveros','Productores_viveros',, 'Labores', 'Tiposlabores' , 'Productoscontrol' , 'Tiposproductoscontrol']
+__all__=['Ciudades', 'Productores', 'Viveros','Productores_viveros', 'Labores', 'Tiposlabores' , 'Productoscontrol' , 'Tiposproductoscontrol']
 
