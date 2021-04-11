@@ -2,11 +2,11 @@ from django.db import models
 from webapp.models.tipos_productos_control import Tiposproductoscontrol
 
 class Productoscontrol(models.Model):
-    registro_ica = models.CharField(max_length=10)
+    registro_ica = models.CharField(max_length=10,unique=True)
     nombre_producto = models.CharField(max_length=50)
-    frecuencia_aplicacion = models.CharField(max_length=10)
-    valor_producto = models.CharField(max_length=10)
-    tipos_productos_control = models.ForeignKey(Tiposproductoscontrol, on_delete=models.SET_NULL, null=True)
+    frecuencia_aplicacion = models.IntegerField()
+    valor_producto = models.FloatField()
+    tipos_productos_control = models.ForeignKey(Tiposproductoscontrol, on_delete=models.PROTECT, null=True,blank=True)
 
     def __str__(self):
 

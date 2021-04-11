@@ -1,12 +1,14 @@
 from django.db import models
 
+
 class Productores(models.Model):
     tipo_identificacion = models.CharField(max_length=2)
-    cedula = models.CharField(max_length=20)
+    cedula = models.CharField(max_length=20,unique=True)
     nombre1 = models.CharField(max_length=20)
-    nombre2 = models.CharField(max_length=20)
+    nombre2 = models.CharField(max_length=20,null=True,blank=True)
     apellido1 = models.CharField(max_length=20)
-    apellido2 = models.CharField(max_length=20)
+    apellido2 = models.CharField(max_length=20,null=True,blank=True)
+
 
     def __str__(self):
 

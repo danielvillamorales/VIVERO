@@ -3,7 +3,7 @@ from django.db import models
 
 class Tiposproductoscontrol(models.Model):
     tipo_producto = models.CharField(max_length=30)
-    periodo_carencia = models.CharField(max_length=10)
+    periodo_carencia = models.IntegerField()
     nombre = models.CharField(max_length=50)
     fecha_ua = models.DateTimeField()
 
