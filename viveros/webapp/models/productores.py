@@ -1,4 +1,5 @@
 from django.db import models
+from webapp.models.viveros import Viveros
 
 
 class Productores(models.Model):
@@ -8,6 +9,7 @@ class Productores(models.Model):
     nombre2 = models.CharField(max_length=20,null=True,blank=True)
     apellido1 = models.CharField(max_length=20)
     apellido2 = models.CharField(max_length=20,null=True,blank=True)
+    viveros = models.ManyToManyField(Viveros)
 
 
     def __str__(self):
